@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./shared/notification/notification.css" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>NodePOP - Login</title>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+          <div class="login">
+            <a href="./login.html" class="btn btn-primary">Login</a>
+            <a href="./" class="btn btn-primary">Signup</a>
+          </div>
+
+          <!-- <div class="filtrar">
+            <form action="">
+              <input type="text" />
+            </form>
+          </div> -->
+
+          <div class="logo">
+            <a href="./index.html" class="logo"><h1>NodePOP</h1></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="notification"></div>
+    <div class="container">
+      <div class="relative justify-center items-center">
+        <div class="block">
+          <h1 class="text-center text-whitemb-4">
+            Sign In
+          </h1>
+          <form
+            id="form-login"
+            class="rounded-lg border justify-center items-center"
+          >
+            <div class="mb-4">
+              <input
+                class="w-full border-0 rounded-md px-3 outline-0 ring-0"
+                type="text"
+                name="user"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                class="w-full border-0 rounded-md px-3 outline-0 ring-0"
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <button class="btn btn-primary" type="submit" disabled>
+                LOGIN
+              </button>
+            </div>
+            <div class="flex justify-center items-center">
+              <p class="text-white">
+                Don't have an
+                <a class="hover:text-[#2081e2]" href="signup.html">account</a>
+                yet?
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById('myTopnav')
+        if (x.className === 'topnav') {
+          x.className += ' responsive'
+        } else {
+          x.className = 'topnav'
+        }
+      }
+    </script>
+    <script type="module" src="./login/login.js"></script>
+  </body>
+</html>

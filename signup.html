@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./shared/notification/notification.css" />
+    <link rel="stylesheet" href="./index/anuncios-list.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>NodePOP</title>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+          <div class="login">
+            <a href="./login.html" class="btn btn-primary">Login</a>
+            <a href="./create.html" class="btn btn-primary">Signup</a>
+          </div>
+
+          <div class="logo">
+            <a href="./index.html" class="logo"><h1>NodePOP</h1></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="notification"></div>
+    <main>
+      <div class="container">
+        <div class="">
+          <div class="block">
+            <h1 class="">
+              Sign Up
+            </h1>
+            <form class="">
+              <div class="">
+                <input
+                  class=""
+                  type="text"
+                  name="textInput"
+                  id="textInput"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  class=""
+                  type="password"
+                  name="passwordInput"
+                  id="passwordInput"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  class=""
+                  type="password"
+                  name="passwordMatchInput"
+                  id="passwordMatchInput"
+                  placeholder="Repeat the password"
+                  required
+                />
+              </div>
+              <div class="flex justify-center items-center">
+                <button class="btn btn-primary" type="submit" disabled>
+                  Signup
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById('myTopnav')
+        if (x.className === 'topnav') {
+          x.className += ' responsive'
+        } else {
+          x.className = 'topnav'
+        }
+      }
+    </script>
+
+    <script type="module" src="./signup/signup.js"></script>
+  </body>
+</html>
