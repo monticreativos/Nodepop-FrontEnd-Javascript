@@ -21,8 +21,9 @@ class CreateAnuncioService {
           Authorization: 'Bearer ' + signupService.getLoggedUser(),
         },
       })
-      const data = await httpResponse.json()
-      if (httpResponse.ok) {
+      const data = await httpResponse.json();
+      console.log(image)
+      if (httpResponse.ok || image.name == '') {
         console.log(data)
 
         const Uploadimage = data
@@ -31,7 +32,7 @@ class CreateAnuncioService {
           title,
           description,
           price,
-          (image = Uploadimage.path),
+          image = Uploadimage.path,
           type,
           category,
         )

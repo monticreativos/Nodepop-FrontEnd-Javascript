@@ -1,6 +1,8 @@
 export function buildNftView(product) {
   const type = product.isSell ? 'venta' : 'compra'
-
+  if (product.image == undefined) {
+    product.image = 'https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png'
+  }
   return `
   <a href="/productDetail.html?id=${product.id}">
     <div class="product">
@@ -24,7 +26,9 @@ export function buildNotFoundProductsView() {
 
 export function buildNftDetailView(nft) {
   const currentTime = new Date(nft.date).toLocaleString()
-
+  if (nft.image == undefined) {
+    nft.image = 'https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png'
+  }
   let nftTemplate = `
   
   <div class="">
@@ -40,7 +44,7 @@ export function buildNftDetailView(nft) {
             </div>
           </div>
           <div class="flex items-center">
-            <img src="./public/img/${nft.image}" alt="" class="rounded-b-lg border-[#151c22] border"/>
+            <img src="${'./public/img/' + nft.image}" alt="" class="rounded-b-lg border-[#151c22] border"/>
           </div>
         </div>
       </div>
@@ -130,7 +134,10 @@ export function buildNftDetailView(nft) {
   return nftTemplate
 }
 export function buildProductDetailView(product) {
-  const type = product.isSell ? 'Compra' : 'Venta'
+  const type = product.isSell ? 'Compra' : 'Venta';
+  if (product.image == undefined) {
+    product.image = 'https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png'
+  }
   return `
   <div class="product-detail">
     <img src="${product.image}" alt="product image" class="img-fluid">
